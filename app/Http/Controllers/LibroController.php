@@ -25,7 +25,7 @@ class LibroController extends Controller
         return response()->json($libro, 201);
     }
 
-    public function show(Libro $libro){
+    public function show($id){
         $libro = Libro::find($id);
         return response()->json(['libro' => $libro]);
     }
