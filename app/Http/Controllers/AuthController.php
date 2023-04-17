@@ -29,7 +29,7 @@ class AuthController extends Controller
             return response()->json(['error' => 'Credencales invalidas'], 401);
         }
 
-        $token = Auth::user()->createToken('name')->accessToken;
+        $token = Auth::user()->createToken('token')->accessToken;
 
         return response()->json(['token' => $token]);
     }
