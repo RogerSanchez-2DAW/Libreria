@@ -20,6 +20,7 @@ class LibroController extends Controller
         $libro->description = $request->input('description');
         $libro->price = $request->input('price');
         $libro->published_at = $request->input('published_at');
+        $libro->image = $request->input('image');
         $libro = Libro::create($request->all());
         $libro->save();
         return response()->json($libro, 201);
@@ -37,6 +38,7 @@ class LibroController extends Controller
         $libro->description = $request->input('description');
         $libro->price = $request->input('price');
         $libro->published_at = $request->input('published_at');
+        $libro->image = $request->input('image');
         $libro->save();
         $libro->update($request->all());
         return response()->json($libro);

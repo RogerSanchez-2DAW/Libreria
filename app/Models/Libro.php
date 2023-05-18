@@ -17,6 +17,7 @@ class Libro extends Model
         'description',
         'price',
         'published_at',
+        'image',
     ];
 
 }
